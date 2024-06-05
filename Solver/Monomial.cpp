@@ -1,11 +1,13 @@
 #include "Monomial.h"
 
-std::string Monomial::toString() const
+std::ostream& operator<<(std::ostream& os, const Monomial& monom) 
 {
-    std::ostringstream oss;
-    if (coefficient == 0) return "";
-    if (degree == 0) oss << coefficient;
-    else if (degree == 1) oss << coefficient << "x";
-    else oss << coefficient << "x^" << degree;
-    return oss.str();
+    if (monom.degree == 0)
+        os << monom.coefficient;
+    else if (monom.degree == 1)
+        os << monom.coefficient << "*x";
+    else
+        os << monom.coefficient << "*x^" << monom.degree;
+    return os;
 }
+
