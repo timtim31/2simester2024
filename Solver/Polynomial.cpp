@@ -25,29 +25,34 @@ void Polynomial::simplify()
 
 Polynomial Polynomial::operator+(const Polynomial& other) const
 {
-    std::vector<Monomial> result = monomials;
-    result.insert(result.end(), other.monomials.begin(), other.monomials.end());
+    Polinomial result(*this);
+    for (const auto& term : other.terms) 
+    {
+        result.terms[term.first] += term.second;
+    }
     return Polynomial(result);
 }
 
 Polynomial Polynomial::operator-(const Polynomial& other) const
 {
-    std::vector<Monomial> result = monomials;
-    for (const auto& m : other.monomials)
+  Polinomial result(*this);
+    for (const auto& term : other.terms) 
     {
-        result.push_back(Monomial(-m.coefficient, m.degree));
+        result.terms[term.first] -= term.second;
     }
     return Polynomial(result);
 }
 
 Polynomial Polynomial::operator*(const Polynomial& other) const
 {
-    std::vector<Monomial> result;
-    for (const auto& m1 : monomials)
+    Polinomial result;
+    for (const auto& term1 : this->terms) 
     {
-        for (const auto& m2 : other.monomials)
+        for (const auto& term2 : other.terms) 
         {
-            result.push_back(Monomial(m1.coefficient * m2.coefficient, m1.degree + m2.degree));
+            int newDegree = term1.first + term2.first;
+            double newCoefficient = term1.second * term2.second;
+            result.terms[newDegree] += newCoefficient;
         }
     }
     return Polynomial(result);
