@@ -117,7 +117,7 @@ Polynomial createPolynomialFromUserInput()
     std::cin >> n;
     for (int i = 0; i < n; ++i)
     {
-        std::cout << "Введите коэффициент и показатель степени для одночлена " << i + 1 << " (íàïðèìåð, 3 2 äëÿ 3x^2): ";
+        std::cout << "Введите коэффициент и показатель степени для одночлена " << i + 1 <<;
         double coefficient;
         int degree;
         std::cin >> coefficient >> degree;
