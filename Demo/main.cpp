@@ -4,10 +4,10 @@
 int main()
 {
     setlocale(LC_ALL, "ru");
-    std::cout << "Ñîçäàéòå ïåðâûé ìíîãî÷ëåí:\n";
+    std::cout << "Ð¡Ð¾Ð·Ð´Ð°Ð¹Ñ‚Ðµ Ð¿ÐµÑ€Ð²Ñ‹Ð¹ Ð¼Ð½Ð¾Ð³Ð¾Ñ‡Ð»ÐµÐ½:\n";
     Polynomial p1 = createPolynomialFromUserInput();
 
-    std::cout << "\nÑîçäàéòå âòîðîé ìíîãî÷ëåí:\n";
+    std::cout << "\nÐ¡Ð¾Ð·Ð´Ð°Ð¹Ñ‚Ðµ Ð²Ñ‚Ð¾Ñ€Ð¾Ð¹ Ð¼Ð½Ð¾Ð³Ð¾Ñ‡Ð»ÐµÐ½:\n";
     Polynomial p2 = createPolynomialFromUserInput();
 
     Polynomial sum = p1 + p2;
