@@ -112,12 +112,12 @@ std::string Polynomial::toString() const
 Polynomial createPolynomialFromUserInput()
 {
     std::vector<Monomial> monomials;
-    std::cout << "Ââåäèòå êîëè÷åñòâî îäíî÷ëåíîâ â ìíîãî÷ëåíå: ";
+    std::cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ Ð¾Ð´Ð½Ð¾Ñ‡Ð»ÐµÐ½Ð¾Ð² Ð² Ð¼Ð½Ð¾Ð³Ð¾Ñ‡Ð»ÐµÐ½Ðµ: ";
     int n;
     std::cin >> n;
     for (int i = 0; i < n; ++i)
     {
-        std::cout << "Ââåäèòå êîýôôèöèåíò è ïîêàçàòåëü ñòåïåíè äëÿ îäíî÷ëåíà " << i + 1 << " (íàïðèìåð, 3 2 äëÿ 3x^2): ";
+        std::cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ¾ÑÑ„Ñ„Ð¸Ñ†Ð¸ÐµÐ½Ñ‚ Ð¸ Ð¿Ð¾ÐºÐ°Ð·Ð°Ñ‚ÐµÐ»ÑŒ ÑÑ‚ÐµÐ¿ÐµÐ½Ð¸ Ð´Ð»Ñ Ð¾Ð´Ð½Ð¾Ñ‡Ð»ÐµÐ½Ð° " << i + 1 << " (Ã­Ã Ã¯Ã°Ã¨Ã¬Ã¥Ã°, 3 2 Ã¤Ã«Ã¿ 3x^2): ";
         double coefficient;
         int degree;
         std::cin >> coefficient >> degree;
