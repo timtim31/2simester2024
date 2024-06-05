@@ -3,9 +3,9 @@
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
-namespace SolverTest
+namespace PolynomialTest
 {
-	TEST_CLASS(MonomialTest)
+	TEST_CLASS(PolynomialTest)
 	{
 	public:
 		
