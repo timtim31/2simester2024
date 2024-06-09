@@ -12,7 +12,7 @@ int main()
     Monomial sum = m1 + m2;
     Monomial dif = m1 - m2;
     Monomial mult = m1 * m2;
-    Monomial div = m1 / m2;
+    Monomial divis = m1 / m2;
     Monomial shift = m1 << 2;
     
     std::cout << "\nm1:" << m1;
@@ -20,7 +20,7 @@ int main()
     std::cout << "\nm1 + m2:" << sum; 
     std::cout << "\nm1 - m2:" << dif;
     std::cout << "\nm1 * m2:" << mult;
-    std::cout << "\nm1 / m2:" << div;
+    std::cout << "\nm1 / m2:" << divis;
     std::cout << "\nm1 << 2:" << shift;
     
     return 0;
