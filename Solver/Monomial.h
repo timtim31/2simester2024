@@ -4,11 +4,9 @@
 
 class Monomial
 {
-public:
+private:
     double coefficient;
     int degree;
 
-    Monomial(double coeff, int deg) : coefficient(coeff), degree(deg) {}
-
-    std::string toString() const;
+    Monomial(double coef = 0.0, int deg = 0) : coefficient(coef), degree(deg) {}
 };
