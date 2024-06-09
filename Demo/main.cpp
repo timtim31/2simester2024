@@ -1,28 +1,27 @@
 #include <iostream>
 #include "..\Solver\Monomial.h"
-#include "..\Solver\Polynomial.h"
-int main()
+#include "..\Solver\Monomial.cpp"
+int main() 
 {
-    setlocale(LC_ALL, "ru");
-    std::cout << "Создайте первый многочлен:\n";
-    Polynomial p1 = createPolynomialFromUserInput();
+    std::cout << "Введите параметры для первого монома (m1):" << std::endl;
+    Monomial m1 = inputMonomial();
 
-    std::cout << "\nСоздайте второй многочлен:\n";
-    Polynomial p2 = createPolynomialFromUserInput();
-
-    Polynomial sum = p1 + p2;
-    Polynomial difference = p1 - p2;
-    Polynomial product = p1 * p2;
-    Polynomial quotient = p1 / p2;
-    Polynomial shifted = p1 << 2;
-
-    std::cout << "\np1: " << p1.toString() << std::endl;
-    std::cout << "p2: " << p2.toString() << std::endl;
-    std::cout << "p1 + p2: " << sum.toString() << std::endl;
-    std::cout << "p1 - p2: " << difference.toString() << std::endl;
-    std::cout << "p1 * p2: " << product.toString() << std::endl;
-    std::cout << "p1 / p2: " << quotient.toString() << std::endl;
-    std::cout << "p1 << 2: " << shifted.toString() << std::endl;
-
+    std::cout << "Введите параметры для второго монома (m2):" << std::endl;
+    Monomial m2 = inputMonomial();
+    
+    Monomial sum = m1 + m2;
+    Monomial dif = m1 - m2;
+    Monomial mult = m1 * m2;
+    Monomial div = m1 / m2;
+    Monomial shift = m1 << 2;
+    
+    std::cout << "\nm1:" << m1;
+    std::cout << "\nm2:" << m2;
+    std::cout << "\nm1 + m2:" << sum; 
+    std::cout << "\nm1 - m2:" << dif;
+    std::cout << "\nm1 * m2:" << mult;
+    std::cout << "\nm1 / m2:" << div;
+    std::cout << "\nm1 << 2:" << shift;
+    
     return 0;
 }
