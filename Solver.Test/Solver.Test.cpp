@@ -5,7 +5,7 @@ using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
 namespace SolverTest
 {
-	TEST_CLASS(SolverTest)
+	TEST_CLASS(MonomialTest)
 	{
 	public:
 		
